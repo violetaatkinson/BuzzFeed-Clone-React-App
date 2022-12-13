@@ -4,7 +4,7 @@
 <p>Serving the app from a json file which will be our data base</p>
 <hr>
 <div>
-   <h3>🧀 What type of cheese are you</h3>
+   <h3>🧀 What type of cheese are you ?</h3>
    <ul>
       <p>Base on your choice of :</p>
      
