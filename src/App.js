@@ -11,6 +11,7 @@ const App = () => {
   const [unansweredQuestionIds, setUnansweredQuestionIds] = useState(null)
   const [showAnswer, setShowAnswer] = useState(false)
 
+  //ref para cada id 
   const refs = unansweredQuestionIds?.reduce((acc, id) => {
       acc[id] = createRef()
       return acc
@@ -35,7 +36,7 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-      const unansweredIds = quiz?.content?.map(({id}) => id)
+      const unansweredIds = quiz?.content?.map(({id}) => id) // para sacar cada id del content
       setUnansweredQuestionIds(unansweredIds)
   }, [quiz])
 
@@ -69,7 +70,7 @@ const App = () => {
                   ref={refs[contentItem.id]}
               />
           ))}
-          {showAnswer && (
+          {showAnswer && (// si show answer existe muestro la respuesta
               <Answer
                   answerOptions={quiz?.answers}
                   chosenAnswers={chosenAnswerItems}
