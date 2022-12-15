@@ -8,6 +8,9 @@ const Questions = ({  quizItemId,
 }) => {
 
   const handleClick = () => {
+    // add to an array we need the prevState , get the prev and add the q.text
+    //  cuando apretamos en una imagen del array de los id solo me quiero quedar con la que he apretado
+    // ese id viene de questionB
     setChosenAnswerItems((prevState) => [...prevState, question.text])
     setUnansweredQuestionIds(unansweredQuestionIds.filter((id) => id !== quizItemId))
   
